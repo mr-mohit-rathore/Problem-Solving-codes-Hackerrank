@@ -1,0 +1,24 @@
+public static int diagonalDifference(List<List<Integer>> arr) {
+ 
+        int rightD=0;
+        int leftD=0;
+        
+        int ans;
+        int j=arr.size()-1;
+        
+        
+        for(int i=0;i<arr.size();i++){
+            
+            rightD+= arr.get(i).get(i);
+            leftD+= arr.get(i).get(j--);
+        }
+            
+            ans=rightD-leftD;
+            
+            
+ 
+ 
+return Math.abs(ans);
+    }
+
+// Question link : https://www.hackerrank.com/challenges/diagonal-difference/problem
